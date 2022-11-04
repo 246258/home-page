@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    background: rgb(82, 23, 124);
+}
+
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 300px 0 0 450px;
+    max-width: 250px;
+    padding: 20px;
+    z-index: 0;
+  }
+
+.container {
+    z-index: 1;
+    margin: 10px 0;
+}
+
+i{
+    margin-right: 30px;
+    font-size: 30px;
+}
