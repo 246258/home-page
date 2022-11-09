@@ -11,6 +11,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -21,26 +25,43 @@
         <script>
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
         </script>
-
-    <!-- Make a file called myScripts.js in parent directory -->
+        
+        <h1>Hello</h1>
+        
+        <!-- Make a file called myScripts.js in parent directory -->
             <script src="myScripts.js"></script>
-    </body>
+        </body>
 
-    <body onload="startTime()">
+        <body onload="startTime()">
 
         <div id="clock"></div>
 
 
         <!-- GOOGLE SEARCH -->
-    <form action="https://google.com/search" method="get" target="_blank">
-    <div class="wrapper">
-      <input type="hidden" name="sitesearch"/>
-      <input type="text" name="q" placeholder="search..." />
-      <input type="submit" value="GO">
-      <a href="https://www.instagram.com/mr.mfss/"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-</form>
-    
+        <form action="https://google.com/search" method="get" target="_blank">
+            <input type="hidden" name="sitesearch"/>
+            <input type="text" name="q" placeholder="search..." class="search-bar"/>
+            <input type="submit" value="GO" class="submit-button">
+        </form>
+        <section class="bookmarks">
+            <a href="http://mail.google.com" target="_blank">
+                <i class="fab fa-google-drive"></i>
+            </a>
+            <a href="https://twitter.com/home">
+                <i class="fab fa-twitter" onclick="showTwitter()"></i>
+            </a>
+            <i class="fas fa-sticky-note" onclick="showNote()"></i>
+            <a href="https://www.youtube.com/">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/mr.mfss/">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </section>
+
+        <textarea placeholder="Write a note..." id="note" class="" onkeyup="autoSave()">
+            <i class="fas fa-times-circle exit-note"></i>   
+        </textarea>
 
         <script src="myScripts.js" async defer></script>
     </body>
